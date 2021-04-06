@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,27 @@ namespace Clase1.Ejercicio2.Vial
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ejercicio 2");
+            string[] archivo = File.ReadAllLines("C:/Users/weird/Desktop/vial.csv");
+
+            Archivo doc = new Archivo();
+
+            int cantidadRegistros = 0;
+
+            foreach (var linea in archivo)
+            {
+                var campo = linea.Split(',');
+
+                doc = new Archivo(int.Parse(campo[0]),
+                                  campo[1], int.Parse(campo[2]),
+                                  campo[3], int.Parse(campo[4]));
+
+                doc.imprimir();
+
+                cantidadRegistros++;
+            }
+
+            Console.WriteLine("\n=> Se leyeron: " + cantidadRegistros + " registros.");
+
             Console.ReadLine();
         }
     }
