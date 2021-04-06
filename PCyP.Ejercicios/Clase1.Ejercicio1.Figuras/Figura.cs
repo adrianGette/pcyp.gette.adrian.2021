@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clase1.Ejercicio1.Figuras
 {
-    public class Figura
+    public interface Figura
     {
-
+        double calcularArea();
+        double calcularPerimetro();
     }
 }
