@@ -31,5 +31,13 @@ namespace Clase3.Ejercicio2.Listas
             return lista2;
         }
 
+        public static void remove(List<string> lista3)
+        {
+            foreach(string color in removeColors)
+            {
+                lista3.Remove(color);
+            }
+        }
+
     }
 }

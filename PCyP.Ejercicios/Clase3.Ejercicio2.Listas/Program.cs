@@ -39,11 +39,27 @@ namespace Clase3.Ejercicio2.Listas
             Vectores.removerColores(removeColors);
 
             // Punto B
+            Console.WriteLine("La lista de colores es: ");
+            Console.WriteLine();
+
             foreach (string col in colors)
             {
                 Console.WriteLine(col);
             }
-            
+
+            Console.WriteLine();
+            Console.WriteLine("La lista de colores despues de remover es: ");
+            Console.WriteLine();
+
+            // Punto C
+            Vectores.remove(colors);
+
+            // Punto D
+            foreach (string col in colors)
+            {
+                Console.WriteLine(col);
+            }
+
 
             Console.ReadLine();
         }
